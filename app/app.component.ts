@@ -6,13 +6,16 @@ import {HomeComponent} from './home/home.component';
 import {Widgets} from './widgets/widgets.component';
 import {StateService} from './common/state.service';
 import {ExperimentsService} from './common/experiments.service';
+import {WidgetsService} from './common/widgets.service';
+import {PricingService} from "./common/pricing.service";
+
 
 @Component({
   selector: 'app',
   templateUrl: 'app/app.component.html',
   styleUrls: ['app/app.component.css'],
   directives: [ ROUTER_DIRECTIVES ],
-  providers: [StateService, ExperimentsService],
+  providers: [StateService, ExperimentsService, WidgetsService, PricingService],
 })
 @RouteConfig([
   {path: '/home',        name: 'Home',        component: HomeComponent, useAsDefault: true },
