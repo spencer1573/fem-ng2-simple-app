@@ -1,3 +1,4 @@
+<pre>{{ config | json }}</pre>
 <h1>
   {{ title }}
 </h1>
@@ -8,6 +9,8 @@
 <hr>
 <div>
   <h2 class="text-error">Home: {{ message }}</h2>
+  <h2>{{ message2 }}</h2>
+  <h2>This is message 3: {{ message3 }}</h2>
   <form class="form-inline">
     <input type="text" [(ngModel)]="message" placeholder="Message" name="message">
     <button type="submit" class="btn" (click)="updateMessage(message)">Update Message</button>
