@@ -1,10 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {StateService} from '../common/state.service';
 import {Config} from '../common/config.model';
+import {Users} from '../users/users.component';
 
 @Component({
   selector: 'home',
-  template: require('./home.component.html')
+  template: require('./home.component.html'),
+  directives: [Users]
 })
 export class HomeComponent implements OnInit {
   title: string = 'Home Page';
